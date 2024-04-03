@@ -1,0 +1,15 @@
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/bin/Debug/net7.0/IT502 Formative Assessment 2
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/bin/Debug/net7.0/IT502 Formative Assessment 2.deps.json
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/bin/Debug/net7.0/IT502 Formative Assessment 2.runtimeconfig.json
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/bin/Debug/net7.0/IT502 Formative Assessment 2.dll
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/bin/Debug/net7.0/IT502 Formative Assessment 2.pdb
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/obj/Debug/net7.0/IT502 Formative Assessment 2.csproj.AssemblyReference.cache
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/obj/Debug/net7.0/IT502 Formative Assessment 2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/obj/Debug/net7.0/IT502 Formative Assessment 2.AssemblyInfoInputs.cache
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/obj/Debug/net7.0/IT502 Formative Assessment 2.AssemblyInfo.cs
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/obj/Debug/net7.0/IT502 Formative Assessment 2.csproj.CoreCompileInputs.cache
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/obj/Debug/net7.0/IT502 Formative Assessment 2.dll
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/obj/Debug/net7.0/refint/IT502 Formative Assessment 2.dll
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/obj/Debug/net7.0/IT502 Formative Assessment 2.pdb
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/obj/Debug/net7.0/IT502 Formative Assessment 2.genruntimeconfig.cache
+/Users/apple/Projects/IT502 Formative Assessment 2/IT502 Formative Assessment 2/obj/Debug/net7.0/ref/IT502 Formative Assessment 2.dll
