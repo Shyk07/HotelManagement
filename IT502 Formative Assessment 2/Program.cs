@@ -5,37 +5,37 @@ class Program
 {
     // Function to add rooms
     static void Add()
-    { 
-            string fileName = "/Users/apple/Desktop/Shy/FileObject/lhms_studentid.txt";
-            Console.WriteLine("Adding rooms...");
+    {
+        string fileName = "/Users/apple/Desktop/Shy/FileObject/lhms_studentid.txt";
+        Console.WriteLine("Adding rooms...");
 
-            try
+        try
+        {
+            Console.Write("Enter the total number of rooms: ");
+            int totalRooms = Convert.ToInt32(Console.ReadLine());
+
+            if (totalRooms <= 0)
             {
-                Console.Write("Enter the total number of rooms: ");
-                int totalRooms = Convert.ToInt32(Console.ReadLine());
+                throw new InvalidOperationException();
+            }
+            using (StreamWriter writer = File.AppendText(fileName))
+            {
 
-                using (StreamWriter writer = File.AppendText(fileName))
-            { 
-
-                    // Write room numbers with timestamp
-                    for (int roomNumber = 1; roomNumber <= totalRooms; roomNumber++)
-                    {
-                        string sDateTime = DateTime.Now.ToString();
-                        writer.WriteLine(DateTime.Now.ToString() + " | Room " + roomNumber);
-                    }
+                // Write room numbers with timestamp
+                for (int roomNumber = 1; roomNumber <= totalRooms; roomNumber++)
+                {
+                    string sDateTime = DateTime.Now.ToString();
+                    writer.WriteLine(DateTime.Now.ToString() + " | Room " + roomNumber);
                 }
+            }
 
-                Console.WriteLine("Added " + totalRooms + " rooms successfully.");
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Error: Invalid input! Please enter a valid number.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
+            Console.WriteLine("Added " + totalRooms + " rooms successfully.");
         }
+        catch (InvalidOperationException ex)
+        {
+            Console.WriteLine("Error: Invalid input!" + ex.Message);
+        }
+    }
 
 
     // Function to display rooms from file
@@ -60,9 +60,9 @@ class Program
                 }
             }
         }
-        catch (FileNotFoundException)
+        catch (FileNotFoundException ex)
         {
-            Console.WriteLine("Error: File not found.");
+            Console.WriteLine("Error:" + ex.Message);
         }
         catch (Exception)
         {
@@ -120,9 +120,9 @@ class Program
                 Console.WriteLine("Room " + roomNumber + " is already booked or does not exist.");
             }
         }
-        catch (Exception ex)
+        catch (FormatException ex)
         {
-            Console.WriteLine("Error: " + ex.Message);
+            Console.WriteLine("Error" + ex.Message);
         }
     }
 
@@ -167,7 +167,7 @@ class Program
                     Console.WriteLine("Room " + roomNumber + " deallocated.");
 
                     // Remove "Allocated" from the line and add it to the updated list
-                    updatedAllocatedRooms.Add(line.Replace("Allocated ", "" ));
+                    updatedAllocatedRooms.Add(line.Replace("Allocated ", ""));
                 }
                 else
                 {
@@ -187,13 +187,9 @@ class Program
                 Console.WriteLine("Room " + roomNumber + " is not currently allocated.");
             }
         }
-        catch (FileNotFoundException)
+        catch (UnauthorizedAccessException ex)
         {
-            Console.WriteLine("Error: File not found.");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
+            Console.WriteLine("Error:" + ex.Message);
         }
     }
 
@@ -265,9 +261,9 @@ class Program
                 Console.WriteLine("No allocated rooms saved");
             }
         }
-        catch (UnauthorizedAccessException)
+        catch (UnauthorizedAccessException ex)
         {
-            Console.WriteLine("Error: Unable to save room allocation data to file.");
+            Console.WriteLine("Error:" + ex.Message);
         }
     }
 
@@ -356,9 +352,9 @@ class Program
             Console.ReadKey();
             Menyu(); // Recursively call the function to show the menu again
     }
-        catch (FormatException)
+        catch (InvalidOperationException ex)
         {
-            Console.WriteLine("Error: Invalid input! Please enter a number.");
+            Console.WriteLine("Error:" + ex);
         }
     }
 
